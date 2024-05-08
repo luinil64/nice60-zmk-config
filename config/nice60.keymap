@@ -68,15 +68,15 @@
 		fn_layer {
 // --------------------------------------------------------------------------------------------
 // | BT CLR | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10 | F11 | F12 |   DEL   |
-// |         |     |  UP |     | END |     |      |UNDER|PG_UP|     |PLUS |     |     |       |
-// |          |  LT |  DN | RT  |     |     | HOME |     |PG_DN|     |     |     |            |
+// |         |     |  UP |EQUAL|     |     |      |UNDER|PG_UP|     |PLUS |     |     |       |
+// |          |  LT |  DN | RT  |     |     | HOME | END |PG_DN|     |     |     |            |
 // |             |     |      | CAPS |     |     |     |     |     |     | DEL |              |
 // |        |       |       |                                     |      |      |      |      |
 // --------------------------------------------------------------------------------------------
 			bindings = <
 	&kp GRAVE &kp F1   &kp F2   &kp F3    &kp F4 &kp F5 &kp F6   &kp F7    &kp F8 &kp F9 &kp F10 &kp F11 &kp F12   &kp DEL
 	&trans     &trans   &kp UP   &kp EQUAL &trans &trans &trans   &kp UNDER &kp PG_UP &trans &kp PLUS &trans &trans &trans 
-	&trans      &kp LEFT &kp DOWN &kp RIGHT &trans &trans &kp HOME &trans    &kp PG_DN &trans &trans  &trans        &trans
+	&trans      &kp LEFT &kp DOWN &kp RIGHT &trans &trans &kp HOME &kp END   &kp PG_DN &trans &trans  &trans        &trans
 	&trans       &trans   &trans   &kp CLCK  &trans &trans &trans   &kp MINUS &trans &trans &kp DEL                 &trans
 	&trans &trans &trans                      &trans                           &trans       &trans      &trans      &trans
 			>;
@@ -85,10 +85,10 @@
 		bt_layer {
 // ------------------------------------------------------------------------------------------------
 // | BT CLR | F1  | F2  | F3  | F4  | F5  | F6  | F7  | F8  | F9  | F10  | F11 | F12 |   BT_CLR   |
-// |         |   |  UP |   | HUEUP | SATUP | BRIUP | SPDUP |   |     |    |     |     |           |
-// |          | LT |  DN  | RT | HUEDN | SATDN | BRIDN | SPDDN |   |     |   |     |              |
+// |         |   |     |   | HUEUP | SATUP | BRIUP | SPDUP |   |     |    |     |     |           |
+// |          |    |      |    | HUEDN | SATDN | BRIDN | SPDDN |   |     |   |     |              |
 // |             |     |      |      |     |     |     |     |     |     |     |                  |
-// |         |      |      |             TOG RGB                |         |       |       |       |
+// |         |      |      |                                    |         |       |       |       |
 // ------------------------------------------------------------------------------------------------
 			bindings = <
 	&out OUT_TOG &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4    &trans          &trans          &trans          &trans          &trans          &trans &trans &bt BT_CLR
